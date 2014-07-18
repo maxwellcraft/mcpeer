@@ -54,7 +54,7 @@ h1, h2, h3 {
 }
 
 .navbar {
-  background-color:#800080;
+  background-color:#114475;
 
 }
 
@@ -77,16 +77,16 @@ li {
 
 /*Pill Styling*/
 .navbar  .pillcolor > li.active > a {
-    background-color: #666699;
+    background-color: #CA7700;
     color: #ffffff;
 }
 
 .navbar .pillcolor > li.active > a:hover {
-  background-color: #666699;
+  background-color: #CA7700;
   color: #ffffff;
 }
 
 .navbar .pillcolor > li > a:hover {
-  background-color: #666699;
+  background-color: #CA7700;
   color: #ffffff;
 }
