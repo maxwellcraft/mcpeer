@@ -1,0 +1,94 @@
+.nav a {
+
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  font-family: "Trebuchet MS", sans-sarif;
+
+
+}
+
+.nav li {
+  display: inline;
+}
+
+.jumbotron {
+  background-image:url('http://goo.gl/04j7Nn');
+  background-repeat:no-repeat;
+  height: 500px;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.navbar {
+  background-color:#114475;
+  border-radius: 0;
+}
+
+li {
+  color:#fff;
+}
+
+/*Link styling*/
+.navbar .nav > li > a {
+  color:#ffffff;
+  font-size: 125%;
+}
+
+/*"Peer" section styling*/
+.navbar .navbar-header > a {
+  color:#ffffff;
+  font-size: 200%;
+  font-family: "Trebuchet MS", sans-sarif;
+}
+
+/*Pill Styling*/
+.navbar  .pillcolor > li.active > a {
+    background-color: #CA7700;
+    color: #ffffff;
+}
+
+.navbar .pillcolor > li.active > a:hover {
+  background-color: #CA7700;
+  color: #ffffff;
+}
+
+.navbar .pillcolor > li > a:hover {
+  background-color: #CA7700;
+  color: #ffffff;
+}
+
+

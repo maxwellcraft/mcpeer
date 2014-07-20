@@ -41,6 +41,15 @@ angular.module('angular-client-side-auth')
     };
 }]);
 
+//trying to make a controller to render home.jade when linked
+angular.module('angular-client-side-auth')
+.controller('HomeCtrl',
+['$rootScope', '$scope', '$location', '$window', 'Auth', function($rootScope, $scope, $location, $window, Auth) {
+
+
+
+}]);
+
 angular.module('angular-client-side-auth')
 .controller('RegisterCtrl',
 ['$rootScope', '$scope', '$location', 'Auth', function($rootScope, $scope, $location, Auth) {
