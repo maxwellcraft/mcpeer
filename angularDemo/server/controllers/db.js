@@ -22,5 +22,20 @@ module.exports = {
                     response.write(JSON.stringify(rows));
                     response.end();
             });
+    },
+    pullSnapshot: function(pullSnapshotID, response) {
+
+        connection.query("SELECT * FROM CONTENT WHERE pID=? ORDER BY pScore+nScore",
+            pullSnapshotID, function (error, rows, fields) {
+                if (error) {
+                    console.log(error);
+                }
+                    response.writeHead(200, {
+                        'Access-Control-Allow-Origin': '*',
+                        'Content-Type': 'text/plain'
+                    });
+                    response.write(JSON.stringify(rows));
+                    response.end();
+            });
     }
 };
