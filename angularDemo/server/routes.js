@@ -4,6 +4,7 @@ var _ =           require('underscore')
     , AuthCtrl =  require('./controllers/auth')
     , UserCtrl =  require('./controllers/user')
     , User =      require('./models/User.js')
+    , DB =        require('./controllers/db')
     , userRoles = require('../client/js/routingConfig').userRoles
     , accessLevels = require('../client/js/routingConfig').accessLevels;
 
@@ -17,6 +18,13 @@ var routes = [
             var requestedView = path.join('./', req.url);
             res.render(requestedView);
         }]
+    },
+
+    {
+        path: '/pullContent/:id',
+        httpMethod: 'GET',
+        middleware: [function(req, res) {
+            DB.pullContent(req.params.id, res)}]
     },
 
     // OAUTH
