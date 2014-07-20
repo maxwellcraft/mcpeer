@@ -56,10 +56,11 @@
 
 <div id="mainstream" >
 
-	<div class ="col-md-8" ng-controller="ContentController as contentCtrl">
-		<h1>Body of Information</h1>
+	<div class ="col-md-8">
+		<button ng-controller="ContentController as contentCtrl" onclick="pullContent(contentArea)">Load</button>
+		<p id="contentArea">Start</p>
+		<h1 id="headerLabel">Body of Information</h1>
 		<div ng-repeat="content in contents">
-			{{content.name}}
 		</div>
 	</div>
 

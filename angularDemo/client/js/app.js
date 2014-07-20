@@ -160,13 +160,36 @@ angular.module('angular-client-side-auth', ['ngCookies', 'ui.router'])
   angular.module('angular-client-side-auth').controller('StoreController', function() {
     this.products = gems;
   });
+//wrap this in a javascript function
+// var pullContent = function(user) { 
 
-  angular.module('angular-client-side-auth').controller('ContentController', function() {
-       $http.get('/pullContent')
-          $scope.contents = res.data;
+//   angular.module('angular-client-side-auth').controller('ContentController', function() {
+//        //$http.get('/pullContent')
+//        $http.get('contents.json')
+//           $scope.contents = res.data;
                 
-        });
-  });
+//         });
+//   });
+// return $scope.contents;
+// }
+var fs = require('fs');
+
+
+function pullContent(id) {
+    var fs = require('fs');
+
+    console.log("is it");
+    var content;
+    // First I want to read the file
+    fs.readFile('contents.json', function read(err, data) {
+        if (err) {
+            throw err;
+        }
+    content = data; 
+    });
+
+document.getElementById(headerLabel).innerHTML = "hello"; 
+}
 
   var gems = [{
     name: 'Azurite',
