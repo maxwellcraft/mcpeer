@@ -131,7 +131,11 @@ html,body,#fullPanel
 
 /*This should style stuff inside content*/
 .contentPanel {
+  font-size:140%;
+}
 
+.contentPanel h4 {
+  font-size:160%;
 }
 
 /*This is the bigger container for content*/
