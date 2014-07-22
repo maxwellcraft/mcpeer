@@ -45,7 +45,11 @@
 </div> -->
 
 
-<br><br><br>
+
+<div class="page-header">
+  <h1>Peer <br><small> By the people, for the people </small></h1>
+</div>
+<br>
 
 <div id="fullPanel" class="container">
 
@@ -114,26 +118,31 @@
       <div class="panel-body contentPanel">
         <h3> Here comes the content </h3>
         
-        <h4> Education </h4>
-        University of Central Valley (Filler Data)
+        <h4> Education <span class="glyphicon glyphicon-book"></span></h4> 
+        <p>University of Central Valley (Filler Data)</p>
         <div class="educationItem" ng-repeat="content in homeCenter.contents | filter:{category: 'EDUCATION'}">
-          {{content.label}}
+          {{content.label}} <span class="badge">{{content.pScore + content.nScore}}</span>
         </div>
+         <br>
 
-        <h4> Work </h4>
+
+        <h4> Work <span class="glyphicon glyphicon-briefcase"></span></h4> 
         <div class="workItem" ng-repeat="content in homeCenter.contents |filter:{category: 'WORK'}">
-        {{content.label}}
+        {{content.label}} <span class="badge">{{content.pScore + content.nScore}}</span>
         </div>
-        
-        <h4> Skills </h4>
-        <div class="skillsItem" ng-repeat="content in homeCenter.contents | filter:{category: 'SKILLS'}">
-        {{content.label}}
-        </div>
+        <br>
 
-        <h4> Miscellaneous </h4>
-        <div class="miscellaneousItem" ng-repeat="content in homeCenter.contents | filter:{category: 'MISCELLANEOUS'}">
-        {{content.label}}
+        <h4> Skills <span class="glyphicon glyphicon-wrench"></span></h4> 
+        <div class="skillsItem" ng-repeat="content in homeCenter.contents | filter:{category: 'SKILLS'}">
+        {{content.label}} <span class="badge">{{content.pScore + content.nScore}}</span>
         </div>
+        <br>
+
+        <h4> Miscellaneous <span class="glyphicon glyphicon-asterisk"></span></h4> 
+        <div class="miscellaneousItem" ng-repeat="content in homeCenter.contents | filter:{category: 'MISCELLANEOUS'}">
+        {{content.label}} <span class="badge">{{content.pScore + content.nScore}}</span>
+        </div>
+        <br>
 
       </div>
 
