@@ -117,7 +117,7 @@
 
       <div class="panel-body contentPanel">
         
-        <h4> Education <span class="glyphicon glyphicon-book"></span></h4> 
+      <h4> Education <span class="glyphicon glyphicon-book"></span></h4> 
         <p>University of Central Valley (Filler Data)</p>
         <div class="educationItem" ng-repeat="content in homeCenter.contents | filter:{category: 'EDUCATION'}">
           {{content.label}} <span class="badge">+ {{content.pScore}}</span> <span class="badge">- {{content.nScore}}</span>
@@ -125,23 +125,39 @@
          <br>
 
 
-        <h4> Work <span class="glyphicon glyphicon-briefcase"></span></h4> 
+      <h4> Work <span class="glyphicon glyphicon-briefcase"></span></h4> 
         <div class="workItem" ng-repeat="content in homeCenter.contents |filter:{category: 'WORK'}">
-            <span class="badge" style="background-color:#2ecc71;">+ {{content.pScore}}</span> <span class="badge" style="background-color:#e74c3c;">- {{content.nScore}}</span> {{content.label}} 
+          <div class="badgeBlock">
+            <span class="badge" style="background-color:#2ecc71;">+ {{content.pScore}}</span> 
+            <br>
+            <span class="badge" style="background-color:#e74c3c;">- {{content.nScore}}</span> 
+          </div>
+            <div class="contentLine">{{content.label}}</div> 
         </div>
         <br>
 
-        <h4> Skills <span class="glyphicon glyphicon-wrench"></span></h4> 
+      <h4> Skills <span class="glyphicon glyphicon-wrench"></span></h4> 
         <div class="skillsItem" ng-repeat="content in homeCenter.contents | filter:{category: 'SKILLS'}">
+          <div class="badgeBlock">
             <span class="glyphicon glyphicon-plus"><span class="badge" style="background-color:#2ecc71;">{{content.pScore}}</span></span>
-            <span class="glyphicon glyphicon-minus"><span class="badge" style="background-color:#e74c3c;">{{content.nScore}}</span></span> {{content.label}}         
+            <br>
+            <span class="glyphicon glyphicon-minus"><span class="badge" style="background-color:#e74c3c;">{{content.nScore}}</span></span> 
+          </div>
+            <div class="contentLine">{{content.label}}</div>         
         </div>
         <br>
 
-        <h4> Miscellaneous <span class="glyphicon glyphicon-asterisk"></span></h4> 
+
+      <h4> Miscellaneous <span class="glyphicon glyphicon-asterisk"></span></h4> 
         <div class="miscellaneousItem" ng-repeat="content in homeCenter.contents | filter:{category: 'MISCELLANEOUS'}">
+          <div class="badgeBlock">
             <span class="glyphicon glyphicon-chevron-up"><span class="badge" style="background-color:#2ecc71;">{{content.pScore}}</span></span> 
-            <span class="glyphicon glyphicon-chevron-down"><span class="badge" style="background-color:#e74c3c;">{{content.nScore}}</span></span> {{content.label}} 
+
+            <br>
+
+            <span class="glyphicon glyphicon-chevron-down"><span class="badge" style="background-color:#e74c3c;">{{content.nScore}}</span></span> 
+          </div>
+            <div class="contentLine">{{content.label}}</div>
         </div>
         <br>
 
