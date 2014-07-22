@@ -92,3 +92,69 @@ li {
 }
 
 
+/*Styling to make column panels that extend to bottom*/
+html,body,#fullPanel
+{
+    height:100%;
+}
+#fullPanel
+{
+    display:table;
+    width: 100%;
+    padding: 10 10; /*set left/right padding according to needs*/
+
+}
+
+.row
+{
+    height: 100%;
+    display: table-row;
+}
+.col-md-3, .col-md-6, .col-md-3
+{
+    display: table-cell;
+    float: none; 
+}
+
+.leftPanel{
+  background-color:#cccccc;
+}
+.midPanel {
+  background-color:#ffffff;
+}
+.rightPanel {
+  background-color:#cccccc;
+}
+
+/*Profile Elements*/
+
+#profilePicture {
+   float:left;
+   height: 25%;
+   width: 25%;
+   padding-right:2%;
+}
+
+.profileName {
+  float:left;
+}
+
+.jobTitle {
+  float:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

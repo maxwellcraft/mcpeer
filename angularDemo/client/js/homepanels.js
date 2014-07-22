@@ -15,15 +15,14 @@ var values = [{
 ];
 
 homePanels.controller('HomeController', function() {
-	this.contents = values;
+	this.contents = contentLines;
 
 });
 
 var contentLines = [{
 	"cID":1,
 	"pID":1,
-	"label":
-	"Agilex Technologies",
+	"label": "Agilex Technologies",
 	"category":"WORK",
 	"pScore":0,
 	"nScore":0,

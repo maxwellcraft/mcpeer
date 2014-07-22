@@ -47,12 +47,16 @@
 
 <br><br>
 
+<div id="fullPanel" class="container">
+
+<div class ="row">
+
 
 <!-- Left Bar Code -->
 
-  <div class ="row">
+  
 
-	 <div class ="col-md-2">
+	 <div class ="col-md-3 leftPanel">
 	   	<h3>Left Buffer</h3>
 	 </div>
 
@@ -61,23 +65,32 @@
 
 <!-- Center Bar Code -->
 
-<div id="mainstream" >
 
-  <div class ="col-md-8" ng-controller="HomeController as homeCenter">
+  <div class ="col-md-6 midPanel" ng-controller="HomeController as homeCenter">
 
   <!-- 		<button ng-controller="ContentController as contentCtrl" onclick="pullContent(contentArea)">Load</button> -->		
-
-    <h2 id="headerLabel">My Profile</h2>
-
-    <p> {{homeCenter.contents[0].job}} </p>
-
-    <div ng-repeat="content in homeCenter.contents">
-      {{content}}
+<!--   Profile Information: Picture, Name, Title-->    
+    
+    <div class="profilePictureDiv">
+        <img id="profilePicture" src="profilePicture.jpg" alt="Image Here">
     </div>
+
+    <div class="profileName">
+        <h3> Ehrlich Bachmann </h3>
+    </div>
+    
+    <div class="jobTitle">
+        <h5> #{{1+1}} @ Pied Piper, and Lead Visionarian </h5>
+    </div>
+
+
+<!--     <div ng-repeat="content in homeCenter.contents" style="float:right">
+      {{content}}
+    </div> -->
 
   </div>
 
-</div>
+
 
 
 
@@ -85,21 +98,11 @@
 
 <!-- Right Bar Code -->
 
-	<div class ="col-md-2">
+	<div class ="col-md-3 rightPanel">
 		<h3>Right Buffer</h3>
-
-
-
-
-
-
-
-
-
-
-
 	</div>
 
+</div>
 </div>
 </body>
 </html
