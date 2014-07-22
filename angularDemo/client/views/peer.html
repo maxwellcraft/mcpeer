@@ -45,7 +45,7 @@
 </div> -->
 
 
-<br><br>
+<br><br><br>
 
 <div id="fullPanel" class="container">
 
@@ -54,11 +54,16 @@
 
 <!-- Left Bar Code -->
 
-  
 
-	 <div class ="col-md-3 leftPanel">
-	   	<h3>Left Buffer</h3>
-	 </div>
+
+	 <div class ="col-md-3">
+    <div id="leftPanel" class="panel panel-default">
+      <div class="panel-body leftPanel">
+          <h3>Left Buffer</h3>
+	    </div>
+    </div>
+  </div>
+
 
 
 
@@ -66,29 +71,77 @@
 <!-- Center Bar Code -->
 
 
-  <div class ="col-md-6 midPanel" ng-controller="HomeController as homeCenter">
+  <div id="midPanel" class ="col-md-6" ng-controller="HomeController as homeCenter">
 
   <!-- 		<button ng-controller="ContentController as contentCtrl" onclick="pullContent(contentArea)">Load</button> -->		
 <!--   Profile Information: Picture, Name, Title-->    
-    
-    <div class="profilePictureDiv">
-        <img id="profilePicture" src="profilePicture.jpg" alt="Image Here">
-    </div>
 
-    <div class="profileName">
-        <h3> Ehrlich Bachmann </h3>
-    </div>
+  <!-- Defining the profilePanel as a panel -->
+  <div class="panel panel-default profilePanel">
+
+    <div class="panel-body">
+
+      <!-- Putting the various profile contents in the panel-body -->
+
+      <div class="profilePictureDiv">
+        <img id="profilePicture" src="profilePicture.jpg" alt="Image Here" class="img-circle">
+      </div>
+
+      <div class="profileName">
+        <h5> Ehrlich Bachmann </h5>
+      </div>
     
-    <div class="jobTitle">
+      <div class="jobTitle">
         <h5> #{{1+1}} @ Pied Piper, and Lead Visionarian </h5>
-    </div>
+      </div>
+
+      <div class="myLocation">
+        <h5> Base of Operations: Si Valley, California </h5>
+      </div>
+
+    </div>  <!-- Closing the body of the panel -->
+
+  </div> <!-- Closing the profile panel -->
 
 
-<!--     <div ng-repeat="content in homeCenter.contents" style="float:right">
-      {{content}}
-    </div> -->
+ <!--     <div ng-repeat="content in homeCenter.contents" style="float:right">     {{content}}    </div> -->
+
+   <!-- Generating a panel for the content lines -->
+   <!-- Could make additional panels for the different kinds of content, or maybe do rows/columns for that -->
+
+  <div id="contentPanel" class="panel panel-default">
+
+      <div class="panel-body contentPanel">
+        <h3> Here comes the content </h3>
+        
+        <h4> Education </h4>
+        University of Central Valley (Filler Data)
+        <div class="educationItem" ng-repeat="content in homeCenter.contents | filter:{category: 'EDUCATION'}">
+          {{content.label}}
+        </div>
+
+        <h4> Work </h4>
+        <div class="workItem" ng-repeat="content in homeCenter.contents |filter:{category: 'WORK'}">
+        {{content.label}}
+        </div>
+        
+        <h4> Skills </h4>
+        <div class="skillsItem" ng-repeat="content in homeCenter.contents | filter:{category: 'SKILLS'}">
+        {{content.label}}
+        </div>
+
+        <h4> Miscellaneous </h4>
+        <div class="miscellaneousItem" ng-repeat="content in homeCenter.contents | filter:{category: 'MISCELLANEOUS'}">
+        {{content.label}}
+        </div>
+
+      </div>
 
   </div>
+
+
+</div> <!-- Closing the midPanel -->
+
 
 
 
@@ -97,10 +150,13 @@
 
 
 <!-- Right Bar Code -->
-
-	<div class ="col-md-3 rightPanel">
-		<h3>Right Buffer</h3>
-	</div>
+<div class ="col-md-3">
+  <div id="rightPanel" class="panel panel-default">
+    <div class="panel-body">
+		  <h3>Right Buffer</h3>
+	  </div>
+  </div>
+</div>
 
 </div>
 </div>
