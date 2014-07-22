@@ -123,6 +123,7 @@ html,body,#fullPanel
 .profilePanel {
   background-color:#D4F0FF;
   height:30%;
+  min-height:25%;
   max-width:110%;
   margin-left:-1.5%;
   margin-right:-1.5%;
