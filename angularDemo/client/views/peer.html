@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 
-<html ng-app="angular-client-side-auth">
+<!-- taking out app name angular-client-side-auth 
+<script type="text/javascript" src="../js/app.js"></script>
+-->
+ <html ng-app="homePanels">
 
   <head>
    	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
    	<link rel="stylesheet" type="text/css" href="../css/main.css">
-   	<script type="text/javascript" src="../js/app.js"></script>
-
+    <script src="../js/angularCopy.js"></script>
+    <script src="../js/homepanels.js"></script>
   </head>
 
 
@@ -42,30 +45,43 @@
 </div> -->
 
 
-<br><br><br>
+<br><br>
+
 
 <!-- Left Bar Code -->
 
-<div class ="row">
+  <div class ="row">
 
-	<div class ="col-md-2">
-		<h3>Left Buffer</h3>
-	</div>
+	 <div class ="col-md-2">
+	   	<h3>Left Buffer</h3>
+	 </div>
+
+
+
 
 <!-- Center Bar Code -->
 
 <div id="mainstream" >
 
-	<div class ="col-md-8">
-		<button ng-controller="ContentController as contentCtrl" onclick="pullContent(contentArea)">Load</button>
-		<p id="contentArea">Start</p>
-		<h1 id="headerLabel">Body of Information</h1>
-		<div ng-repeat="content in contents">
-		</div>
-	</div>
+  <div class ="col-md-8" ng-controller="HomeController as homeCenter">
 
+  <!-- 		<button ng-controller="ContentController as contentCtrl" onclick="pullContent(contentArea)">Load</button> -->		
+
+    <h2 id="headerLabel">My Profile</h2>
+
+    <p> {{homeCenter.contents[0].job}} </p>
+
+    <div ng-repeat="content in homeCenter.contents">
+      {{content}}
+    </div>
+
+  </div>
 
 </div>
+
+
+
+
 
 <!-- Right Bar Code -->
 
