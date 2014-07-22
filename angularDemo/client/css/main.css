@@ -92,6 +92,18 @@ li {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*Styling to make column panels that extend to bottom*/
 
 html,body,#fullPanel
@@ -131,12 +143,37 @@ html,body,#fullPanel
 
 /*This should style stuff inside content*/
 .contentPanel {
-  font-size:140%;
+  /*changing this font size changes everything in the content panel*/
+  font-size:125%;
 }
 
 .contentPanel h4 {
-  font-size:160%;
+  font-size:150%;
 }
+
+.contentLine {
+ font-size:125%;
+ display:inline-block;
+ float:none; 
+ margin-bottom:5%;
+ padding-top:1.5%;
+ 
+/* padding-bottom:2%;
+ margin-bottom:5%;
+ padding-left:1%;*/
+}
+
+.badgeBlock {
+  display:inline-block;
+  float:left; 
+}
+
+.badge {
+  font-size:100%;
+  text-align:left;
+  width:90%;
+}
+
 
 /*This is the bigger container for content*/
 #contentPanel {
@@ -185,9 +222,6 @@ html,body,#fullPanel
 .myLocation h5 {
   font-size: 125%;
 }
-
-
-
 
 
 

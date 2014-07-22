@@ -19,11 +19,12 @@ homePanels.controller('HomeController', function() {
 
 });
 
+//changed first category from WORK to SKILLS for testing purposes
 var contentLines = [{
 	"cID":1,
 	"pID":1,
 	"label": "Agilex Technologies",
-	"category":"WORK",
+	"category":"SKILLS",
 	"pScore":0,
 	"nScore":0,
 	"lastvoted":"2014-07-19T21:19:18.000Z"
