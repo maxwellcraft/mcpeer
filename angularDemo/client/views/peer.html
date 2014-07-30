@@ -9,15 +9,15 @@
    	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
    	<link rel="stylesheet" type="text/css" href="../css/main.css">
     <script src="../js/angularCopy.js"></script>
+    <script src="../js/angular-animate.js"></script>
     <script src="../js/homepanels.js"></script>
   </head>
 
 
 <body>
-<!-- <div class="row">
-
-        <div class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container">
+<div class="container-fluid">
+      <div class="navbar navbar-default navbar-static-top" role="navigation">
+        
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Peer</a>
           </div>
@@ -26,32 +26,31 @@
             <li class="active"><a href="#">Home</a></li>
           </ul>
           <div id="searchField">
-          <form class="navbar-form navbar-left" role="search">
-        	<div class="form-group">
-          	<input type="text" class="form-control" placeholder="Search">
-        	</div>
-        	<button type="submit" class="btn btn-default"><b class = "glyphicon glyphicon-search"></b></button>
-      	  </form>
+            <form class="navbar-form navbar-left" role="search">
+        	     <div class="form-group">
+          	     <input type="text" class="form-control" placeholder="Search">
+        	     </div>
+        	  <button type="submit" class="btn btn-default"><b class = "glyphicon glyphicon-search"></b></button>
+      	    </form>
       	  </div>
 
           <ul class="nav navbar-nav nav-pills pull-right pillcolor">
             <li><a href="#">Skills</a></li>
-            <li><a href="#">People</a></li>
+            <li><a href="people.html">People</a></li>
           </ul>
 
 
-  		</div>
   	</div>
-</div> -->
+    </div>
 
 
 
 <div class="page-header">
-  <h1>Peer <br><small> By the people, for the people </small></h1>
+  <h1 class="centerText">Peer <br><small> By the people, for the people </small></h1>
 </div>
 <br>
 
-<div id="fullPanel" class="container">
+<div id="fullPanel" class="container-fluid">
 
 <div class ="row">
 
@@ -60,13 +59,29 @@
 
 
 
-	 <div class ="col-md-3">
-    <div id="leftPanel" class="panel panel-default">
-      <div class="panel-body leftPanel">
-          <h3>Left Buffer</h3>
-	    </div>
+<div class ="col-md-3" ng-controller="LeftPanelController as snapController">
+  <div id="leftPanel" class="panel panel-default" >
+    <div class="panel-body leftPanel">
+
+      <h3 class="centerText">Top Profiles</h3>
+
+      <div class="profSnapshot" ng-repeat="snapshot in snapController.snapshots | toArray | orderBy:'-pScore'">
+        <div class="well singleSnapshot">
+         <div class="snapshotName"> #{{$index+1}} {{snapshot.firstName}} {{snapshot.lastName}} </div>
+          
+          <div class="snapshotScore">           
+            <span class="glyphicon glyphicon-chevron-up" style="color:#2ecc71;"></span> {{snapshot.pScore}}
+            <span class="glyphicon glyphicon-chevron-down" style="color:#e74c3c;"></span> {{snapshot.nScore}}
+          </div>
+          
+          <br>
+          <div class="snapshotSkills"> Skills: {{snapshot.skills}} </div>
+        </div>
+      </div>
+
     </div>
   </div>
+</div>
 
 
 
@@ -88,15 +103,15 @@
       <!-- Putting the various profile contents in the panel-body -->
 
       <div class="profilePictureDiv">
-        <img id="profilePicture" src="profilePicture.jpg" alt="Image Here" class="img-responsive img-circle">
+        <img class="profilePicture img-responsive img-circle" src="erlich.jpg" alt="Image Here" >
       </div>
 
       <div class="profileName">
-        <h5> Ehrlich Bachmann </h5>
+        <h5> Erlich Bachmann </h5>
       </div>
     
       <div class="jobTitle">
-        <h5> #{{1+1}} @ Pied Piper, and Lead Visionarian </h5>
+        <h5> #{{1+1}} @ Pied Piper, and Lead Visionary </h5>
       </div>
 
       <div class="myLocation">
@@ -185,7 +200,7 @@
 <div class ="col-md-3">
   <div id="rightPanel" class="panel panel-default">
     <div class="panel-body">
-		  <h3>Right Buffer</h3>
+		  <h3 class="centerText">Right Buffer</h3>
 	  </div>
   </div>
 </div>

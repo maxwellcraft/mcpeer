@@ -49,13 +49,16 @@
   color: #00b0ff;
 }
 
-h1, h2, h3 {
+.centerText {
   text-align: center;
 }
 
 .navbar {
   background-color:#114475;
   border-radius: 0;
+  margin-left:-1%;
+  margin-right:-1%;
+
 }
 
 li {
@@ -117,7 +120,13 @@ html,body,#fullPanel
     padding: 10 10; /*set left/right padding according to needs*/
 
 }
+#fullPeoplePanel
+{
+    display:table;
+    width: 100%;
+    padding: 10 10; /*set left/right padding according to needs*/
 
+}
 .row
 {
     height: 100%;
@@ -168,11 +177,19 @@ html,body,#fullPanel
   float:left; 
 }
 
+.snapshotScore {
+  display:inline-block;
+  float:right;
+}
+
 .badge {
   font-size:100%;
   text-align:left;
   width:90%;
 }
+
+
+
 
 
 /*This is the bigger container for content*/
@@ -197,17 +214,18 @@ html,body,#fullPanel
 
 #leftPanel {
   height:100%;
-  width:100%;
   background-color:#C2CBCE;
 }
 
 
+
+
+
 /*Profile Elements*/
 
-#profilePicture {
+.profilePicture {
    float:left;
-   height: auto;
-   width: 25%;
+   max-width:25%;
    margin-right:2%;
 }
 
@@ -223,14 +241,85 @@ html,body,#fullPanel
   font-size: 125%;
 }
 
+.singleSnapshot {
+  border-style:none;
+  font-size:125%;
+}
+
+.snapshotName{
+  display:inline-block;
+  font-size:120%;
+  float:none;
+}
+
+
+
+
+/*People HTML Styling*/
+
+#peoplePanel {
+  height:100%;
+  width:100%;
+}
+
+.shortProfileContent {
+  font-size:115%;
+  margin-top:-3%;
+}
+
+.shortProfile {
+  padding-top:4%;
+  padding-left:2%;
+}
 
 
 
 
 
+/*Animations*/
+.my-repeat-animation.ng-enter, 
+.my-repeat-animation.ng-leave, 
+.my-repeat-animation.ng-move {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  position:relative;
+}
 
+.my-repeat-animation.ng-enter {
+  left:-10px;
+  opacity:0;
+}
+.my-repeat-animation.ng-enter.ng-enter-active {
+  left:0;
+  opacity:1;
+}
 
+.my-repeat-animation.ng-leave {
+  left:0;
+  opacity:1;
+}
+.my-repeat-animation.ng-leave.ng-leave-active {
+  left:-10px;
+  opacity:0;
+}
 
+.my-repeat-animation.ng-move {
+  opacity:0.5;
+}
+.my-repeat-animation.ng-move.ng-move-active {
+  opacity:1;
+}
 
+.glyphicon-fire {
+  color:#FF6600;
+}
 
-
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #DBDBDB, #8F8F8F, #DBDBDB); 
+    background-image:    -moz-linear-gradient(left, #DBDBDB, #8F8F8F, #DBDBDB); 
+    background-image:     -ms-linear-gradient(left, #DBDBDB, #8F8F8F, #DBDBDB); 
+    background-image:      -o-linear-gradient(left, #DBDBDB, #8F8F8F, #DBDBDB); 
+}
