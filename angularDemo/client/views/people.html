@@ -48,19 +48,24 @@
   				<div id="peoplePanel" class="panel panel-default">
   					<div class="panel-body">
 
-  						Order By: <select ng-model="orderSelection">
+
+  					<div class="filterText">
+  						<input ng-model="filterText" placeholder="Filter People" class="filterValue">
+  					</div>
+  						
+  					<div class="orderBox">
+  						<select ng-model="orderSelection">
+  							<option value="">-- Sort List --</option>
   							<option value="lastName">Last Name</option>
   							<option value="jobTitle">Job Title</option>
   							<option value="-pScore">Score</option>
   						</select>
-  						<br><br>
+  					</div>
+  					<br><br>						
 
-  						<div class="filterText">
-  							<input ng-model="filterText" placeholder="Filter People" style="">
-  						</div>
-  						<hr>
-
-  						<div class="my-repeat-animation" data-ng-repeat="people in peopleCtrl.people | orderBy:orderSelection | filter:filterText">
+  					<hr>
+  						
+  					<div class="my-repeat-animation" data-ng-repeat="people in peopleCtrl.people | orderBy:orderSelection | filter:filterText">
   								<img src={{people.profilePicture}} class="profilePicture img-responsive img-circle">
   								<div class="shortProfile">
 

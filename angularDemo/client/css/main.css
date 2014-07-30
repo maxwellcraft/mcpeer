@@ -272,7 +272,24 @@ html,body,#fullPanel
   padding-left:2%;
 }
 
+.filterText {
+  float:left;
+  margin-right:10%;
+}
 
+.filterValue {
+  float:left;
+  width:125%;
+  font-size: 140%;
+  border-color:#cccccc;
+
+}
+
+.orderBox {
+  float:right;
+  color:#6E6E6E;
+  font-size:130%;
+}
 
 
 
