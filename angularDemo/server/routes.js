@@ -32,6 +32,12 @@ var routes = [
         middleware: [function(req, res) {
             DB.pullSnapshot(req.params.id, res)}]
     },
+    {
+        path: '/search(/:method)',
+        httpMethod: 'GET',
+        middleware: [function(req, res) {
+            DB.smartSearch(req, res)}]
+    },
     // OAUTH
     {
         path: '/auth/twitter',

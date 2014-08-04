@@ -121,12 +121,12 @@ module.exports = {
     },
 
     facebookStrategy: function() {
-        if(!process.env.FACEBOOK_APP_ID)     throw new Error('A Facebook App ID is required if you want to enable login via Facebook.');
-        if(!process.env.FACEBOOK_APP_SECRET) throw new Error('A Facebook App Secret is required if you want to enable login via Facebook.');
+        // if(!process.env.FACEBOOK_APP_ID)     throw new Error('A Facebook App ID is required if you want to enable login via Facebook.');
+        // if(!process.env.FACEBOOK_APP_SECRET) throw new Error('A Facebook App Secret is required if you want to enable login via Facebook.');
 
         return new FacebookStrategy({
-            clientID: process.env.FACEBOOK_APP_ID,
-            clientSecret: process.env.FACEBOOK_APP_SECRET,
+            clientID: 1437071296573429,//process.env.FACEBOOK_APP_ID,
+            clientSecret: b80bfd845ea81e90798b86519ec25ac3,//process.env.FACEBOOK_APP_SECRET,
             callbackURL: process.env.FACEBOOK_CALLBACK_URL || "http://localhost:8000/auth/facebook/callback"
         },
         function(accessToken, refreshToken, profile, done) {
